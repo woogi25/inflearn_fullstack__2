@@ -1,0 +1,41 @@
+Winscp 실행
+
+ctrl + p
+
+sudo su 입력
+
+apt-get install mysql-server
+
+mysql 접속 : mysql -u root -p
+password는 처음에는 그냥 엔터
+
+password 설정
+alter user 'root'@'localhost' identified with mysql_native_password by '변경할 비밀번호';
+
+exit;
+
+다시 접속(비번 확인용)
+mysql -u root -p
+
+000000(비번 안보임)
+
+접속 권한 허용
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' identified by '000000';
+
+flush privileges; (권한 저장)
+
+외부 접속 허용
+exit;
+vi /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address앞에서 i누르고 #입력하고 wq!로 탈출
+service mysql restart 재시작
+
+mysql workbench 그냥 설치
+
+워크벤치 실행 -> '+' 버튼 -> aws 인바운드 규칙 -> 보안편집 ->규칙 추가 -> mysql/aurora ipv4 선택 -> 규칙 저장
+
+hostname = 내 was ip
+username = 내 mysql id
+password = 내 mysql password
+
+ok누르면 생성
