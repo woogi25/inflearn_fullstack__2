@@ -1,0 +1,33 @@
+aws 회원가입 - 로그인 - ec2 - 지역 : 서울 설정 - 인스턴스 - 인스턴스 시작 - ubuntu 18.04
+ - 인스턴스 유형 - 프리티어 사용가능(t2.micro)
+- 스토리지 그대로 - 새 키 페어 생성(이름 자유롭게)하고 다운 - 인스턴스 시작 - putty 설치
+ - puttygen실행 - load클릭 - .pem파일 선택
+- save private key -> WinScp실행-> host name에는 고정ip(생성 방법: aws 탄력적 ip탭
+ -> 탄력적 ip주소 할당 -> 할당클릭 -> 작업탭
+->탄력적 ip 주소 연결클릭 ->인스턴스는 만든 인스턴스설정 -> 연결 클릭 ->Winsc실행
+ -> 호스트 이름 -> 고정ip
+ -> 사용자이름 ubuntu -> 비밀번호는 고급탭 ppk설정
+-> 저장 -> 로그인-> 설정 -> 통합 -> 프로그램 -> putty연결 -> ctrl + p 
+
+sudo su - 관리자 권한 
+
+apt-get update
+apt-get install nginx
+
+사이트 띄우기
+ip주소 검색 - >보안 - 인바운드 규칙 - 보안 그룹 클릭 -> edit -*> inbound rules -> 규칙 추가 ->http유형 소스 정보는 anywhere v4 규칙저장 
+
+apt-get install nodejs - 너무 구 버전 설치
+
+------------------------------------------------------------------- 신 버전
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_14_setup.sh
+
+sudo bash nodesource_setup.sh
+
+bash nodes tap키 엔터
+
+apt-get install nodejs 이러면 최신 버전 설치 됨
+
+unode -v
+npm -v
+로 확인
