@@ -1,0 +1,15 @@
+* INSERT문
+INSERT INTO 테이블이름(컬럼이름1, 컬럼이름2, 컬럼이름3, ...)
+   VALUES (데이터값1, 데이터값2, 데이터값3, ...)
+
+* UPDATE문
+UPDATE 테이블이름
+SET 컬럼이름1=데이터값1, 컬럼이름2=데이터값2, ...
+WHERE 필드이름=데이터값
+
+* DELETE문
+DELETE FROM 테이블이름
+WHERE 필드이름=데이터값
+
+* SLECT문
+select 컬럼 from 테이블 where 조건
