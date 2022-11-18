@@ -1,0 +1,16 @@
+DB - 데이터 저장소. 프로그램 실행, 종료 여부에 관계없이 데이터를 저장
+RDBMS, No SQL
+
+이 강의는 RDBMS에서 My SQL
+
+엑셀 ------------------- RDBMS
+파일 생성		 DB(스키마) 생성
+시트 생성 	테이블 생성
+데이터 입력	데이터 입력
+
+SQL
+1.DCL : GRANT, REVOKE
+
+2.DDL : CREATE, ALTER, DROP
+
+3.DML : SELECT,INSERT,UPDATE,DELETE
