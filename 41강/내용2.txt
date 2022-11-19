@@ -1,0 +1,11 @@
+My sql 두번째 탭 클릭 -> +버튼 클릭 -> mydb 더블클릭 -> 이름 짓고 Rename references 클릭 -> add diagram 더블클릭
+사진대로 만들기
+'A' = active
+current_timestamp = 현재시간
+current_timestamp on update current_timestamp = 업데이트된 시간
+
+fie -> export -> 맨 위에 클릭 후 -> 넘어가서 -> copy to clipboard 클릭 후 finish
+
+이전에 만들었던 곳으로 돌아가서 붙여넣기 -> schemas에서 tables 보면 들어와있음
+
+사진대로 입력 - apply클릭 후 확인
