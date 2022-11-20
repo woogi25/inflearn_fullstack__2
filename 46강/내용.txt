@@ -1,0 +1,15 @@
+controllers : 직접 접근
+DAO : 데이터 베이스 접근
+Route : 접근 방법 정의
+
+const connection = await pool.getConnection(async (conn) => conn);
+//여기서 pool은 mysql에 접근할 수 있는 하나의 객체
+
+const [rows] = await indexDao.exampleDao(connection);
+//데이터 베이스 접근 관련 로직
+
+const [rows] = await indexDao.exampleDao(connection);
+[rows] : 비구조 할당
+
+nodemon index.js
+오류나면 강의 북마크 확인
