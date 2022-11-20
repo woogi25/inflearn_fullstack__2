@@ -1,0 +1,6 @@
+node -v
+npm -v(노드의 패키지 매니저)
+버전확인
+
+npm init : package.json 생성
+npm i express : npm이 express 설치
