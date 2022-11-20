@@ -1,0 +1,15 @@
+API (Aplication Programming Interface) : 미리 개발해둔 기능. HTTP 프로토콜을 주고 받는 것
+GET(조회), POST(생성), PATCH, PUT, DELETE 등
+
+Packet = 데이터 덩어리(클라이언트 - 서버 주고 받음)
+헤더(메타 데이터)
+바디(이름, 나이, 성별)
+* form
+* XML	<이름>홍길동</이름>
+* JSON
+{
+    이름:홍길동
+}
+
+Rest API
+- API 표준
