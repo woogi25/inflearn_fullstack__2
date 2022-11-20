@@ -1,0 +1,54 @@
+indexRoute.js  
+// 학생 테이블 조회
+  app.get("/students", index.readStudents);
+
+
+indexController.js
+// 학생 테이블 조회
+exports.readStudents = async function(rep, res) {
+  try {
+    const connection = await pool.getConnection(async (conn) => conn);
+    try {
+      const [rows] = await indexDao.selectStudents(connection);
+
+      return res.send({
+        result: rows,
+        isSuccess: true,
+        code: 200, // 요청 실패시 400번대 코드
+        message: "요청 성공",
+      });
+    } catch (err) {
+      logger.error(`readStudents Query error\n: ${JSON.stringify(err)}`);
+      return false;
+    } finally {
+      connection.release();
+    }
+  } catch (err) {
+    logger.error(`readStudents DB Connection error\n: ${JSON.stringify(err)}`);
+    return false;
+  }
+}
+
+
+indexDao.js
+exports.selectStudents = async function (connection) {
+  const Query = `SELECT * FROM Students;`;
+  const Params = [];
+
+  const rows = await connection.query(Query, Params);
+
+  return rows;
+};
+
+
+Postman으로 확인(사진1)
+
+이름 조회(사진3, 4) 또는 
+//이름 조회
+  const { studentName } = rep.query;
+  console.log(studentName);
+
+
+특정 이름 조회(사진 5, 6)
+
+passvalueable (사진 7,8,9)
