@@ -16,7 +16,7 @@ exports.isValidStudentIdx = async function (connection, studentIdx) {
   const Query = `SELECT * FROM Students where studentIdx = ?;`;
   const Params = [studentIdx];
 
-  const rows = await connection.query(Query, Params);
+  const [rows] = await connection.query(Query, Params);
 
   if (rows < 1) {
     return false
